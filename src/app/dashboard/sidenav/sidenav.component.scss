@@ -1,0 +1,101 @@
+:host {
+
+    display: inline-block;
+    width: 13%;
+    height: 102%;
+    flex: 1;
+    order: 1;
+
+    #sidenav {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background-color: #0780c6;
+        box-shadow: 0 10px 10px 4px rgba(0,0,0,.40);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        ul {
+            list-style-type: none;
+            width: 100%;
+            margin-top: 35%;
+            font-size: 120%;
+        }
+
+        .menuIn {
+            font-size: 80%;
+        }
+
+        .menuIn:hover span {
+            color: darkorange;
+        }
+    }
+
+    li {
+        margin-bottom: 5%;
+        padding: 5% 1%;
+        width: 84%;
+        position: relative;
+        transform: translateZ(0);
+        transition: color 1000ms;
+
+        div {
+            display: none;
+        }
+        
+    }    
+
+    .menuOut:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #012738;
+        transform: scaleY(0);
+        transform-origin: 50% 0%;
+        transition-property: transform;
+        transition: 300ms ease-out;
+    }
+
+    .menuOut:hover:before {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        
+    }
+
+    .menuOut:hover div {
+        display: inline-block;
+
+        ul {
+            margin-top: 5%;
+            list-style-type: square;
+            color: darkorange;
+        }
+    }
+
+    span {
+        color: whitesmoke;
+        padding: 5px;
+        font-family: sans-serif;
+        cursor: pointer;
+    }
+
+    .sidenavMenuUl {
+        margin-top: 5% !important;
+    }
+
+    div ul li i {
+        margin-right: 5%;
+    }
+
+    div ul li .fas.fa-clipboard-list {
+        margin-right: 8%;
+    }
+
+    div ul li div {
+        width: 80%;
+    }
+}

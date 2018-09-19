@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/labfacil-angular-v2",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

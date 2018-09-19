@@ -1,0 +1,52 @@
+:host {
+
+    width: 100%;
+    height: 6%;
+    display: inline-block;
+    
+    #toolbar {
+        height: 100%;
+        box-shadow: 0 10px 10px 4px rgba(0,0,0,.40);
+        background:whitesmoke;
+        outline-width: 0;
+
+        span {
+            color: #0780c6;
+            padding: 0.4%;
+            margin: 0.5% 0;
+            cursor: pointer;
+            float: right;
+            font-size: 140%;
+            font-family: arial;
+
+            .far, .fas {
+                margin-right: 5px;
+            }
+        }
+
+        img {
+            width: 8%;
+            margin-left: 2%;
+            margin-top: 1%;
+        }
+
+        span:hover {
+            border: 1px outset orangered;
+            border-radius: 21px;
+            background-color: silver;
+        }
+
+        span:first-child {
+            float: initial;
+        }
+
+        span:first-child:hover {
+            border: none;
+            border-radius: none;
+            cursor: auto;
+            padding-top: 0;
+            padding-bottom: 0; 
+            background-color: whitesmoke;
+        }
+    }
+}

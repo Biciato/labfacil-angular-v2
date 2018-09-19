@@ -1,0 +1,23 @@
+<div id="table-wrapper">    
+    <table style="width:100%">
+        <thead>
+            <tr>
+                <th *ngFor="let field of unidadeFields" style="width:150px;">{{field}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let unidade of unidades">
+                <td>{{ unidade.cnpj }}</td>
+                <td>{{ unidade.ie }}</td>
+                <td style="width: 200px;">{{ unidade.razao_social }}</td>
+                <td style="width: 200px;">{{ unidade.nome_fantasia }}</td>
+                <td>{{ unidade.cod_uni }}</td>
+                <td style="width: 150px;">{{ unidade.nome_contato }}</td>
+                <td >{{ unidade.email_contato }}</td>
+                <td>{{ unidade.tel_contato }}</td>
+                <td>{{ unidade.tel2_contato }}</td>
+                <td>{{ unidade.cel_contato }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

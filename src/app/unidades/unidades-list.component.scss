@@ -1,0 +1,97 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+
+    #row {
+        width: 50%;
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+
+        span {
+            background-color: #0780c6;
+            color: aliceblue;
+            padding: 6%;
+            border-radius: 50px;
+        }
+
+        .dropdown-submenu {
+            display: block;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+            list-style: none;
+            border-bottom: 1px solid #0780c6;
+            cursor: pointer;
+        }
+
+        button {
+            width: 40%;
+            padding: 2%;
+            border-radius: 10px;
+            background: cadetblue;
+            font-family: arial;
+            font-size: medium;
+            color: aliceblue;
+            cursor: pointer;
+        }
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 35%;
+    cursor: pointer;
+}
+
+ ul {
+    padding: 0;
+    cursor: pointer;
+}
+
+#dropdownMenu {
+    left: 100%;
+    width: 80%;
+    margin-top: -30px;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+#dropdownMenu2 {
+    left: 100%;
+    width: 80%;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #f9f9f9;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.dropdown-submenu:hover #dropdownMenu {
+    display: block;
+    position: absolute;
+    list-style: none;
+} 
+
+.dropdown-submenu2:hover #dropdownMenu2 {
+    display: block;
+    padding: 10%;
+    position: absolute;
+    margin-top: -30px;
+} 
+
+.dropdown-submenu2 {
+    padding: 5%;
+    border-bottom: 1px solid #0780c6;
+    background-color: #f9f9f9;
+}
+
+

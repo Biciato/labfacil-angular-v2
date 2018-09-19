@@ -1,0 +1,37 @@
+:host {
+    
+    width: 90%;
+    height: 100%;
+
+    #table-wrapper {    
+        
+        overflow: auto;
+        margin-top: 10%;
+        height: 100%;
+
+        table {
+            width: 100%;
+            padding: 2%;
+            table-layout: fixed;
+            border-collapse: collapse;
+
+            thead {
+                background-color: #0780c6;
+                color: antiquewhite;
+            }
+
+            th, td {
+                text-align: center;
+                padding: 8px;
+                width: 250px;
+                height: 45px;
+                border-bottom: 1px solid darkorange;
+            }
+
+            tr:hover {
+                background-color: #03a0fa;
+                cursor: pointer;
+            }
+        }
+    }
+}

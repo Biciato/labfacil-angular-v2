@@ -1,0 +1,176 @@
+#login {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f0;
+  background-image: url('/assets/images/imagem-tela-login.jpg');
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  overflow: auto;
+
+  img {
+    width: 11%;
+    margin-left: 68%;
+    margin-top: 5%;
+  }
+
+  div {
+    width: 18%;
+    height: 28%;
+    margin-left: 64.9%;
+    margin-top: 2%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #999;
+
+    h1 {
+      background-color: #0780c6;
+      color: darkorange;
+      font-family: sans-serif;
+      margin: -2% 1%;
+      padding-top: 1%;
+      position: absolute;
+      width: 16%;
+      height: 6%;
+      border-radius: 15px;
+      box-shadow: 1px 1px 5px #999;
+    }
+
+    form {
+      margin-top: 15%;
+
+      p:last-child {
+        position: absolute;
+        left: 66%;
+        padding: 2% 2%;
+      }
+    }
+  }
+}
+
+.input {
+	
+	// needs to be relative so the :focus span is positioned correctly
+	position:relative;
+	
+	// bigger font size for demo purposes
+	font-size: 1.5em;
+	
+	// the border gradient
+	background: linear-gradient(21deg, #10abff, #1100aa);
+	
+	// the width of the input border
+	padding: 3px;
+	
+	// we want inline fields by default
+	display: inline-block;
+	
+	// we want rounded corners no matter the size of the field
+	border-radius: 9999em;
+	
+	// style of the actual input field
+	*:not(span) {
+		position: relative;
+		display: inherit;
+		border-radius: inherit;
+		margin: 0;
+		border: none;
+		outline: none;
+		padding: 0 .325em;
+		z-index: 1; // needs to be above the :focus span
+		
+		// summon fancy shadow styles when focussed
+		&:focus + span {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	
+	// we don't animate box-shadow directly as that can't be done on the GPU, only animate opacity and transform for high performance animations.
+	span {
+		
+		transform: scale(.993, .94); // scale it down just a little bit
+		transition: transform .5s, opacity .25s;
+		opacity: 0; // is hidden by default
+		
+		position:absolute;
+		z-index: 0; // needs to be below the field (would block input otherwise)
+		margin:4px; // a bit bigger than .input padding, this prevents background color pixels shining through
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		border-radius: inherit;
+		pointer-events: none; // this allows the user to click through this element, as the shadow is rather wide it might overlap with other fields and we don't want to block those.
+		
+		// fancy shadow styles
+		box-shadow: inset 0 0 0 3px #fff,
+			0 0 0 4px #fff,
+			3px -3px 30px #10abff, 
+			-3px 3px 30px #10abff;
+	}
+	
+}
+
+input {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	line-height: 1.5;
+  font-size:1em;
+	color:#2e3750;
+	min-width:12em;
+}
+
+::placeholder {
+	color:#cbd0d5;
+}
+
+html::after {
+	content:'';
+	background: linear-gradient(21deg, #10abff, #101010);
+	height:3px;
+	width:100%;
+	position:absolute;
+	left:0;
+	top:0;
+}
+
+button{
+  background:#2e3750;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 3em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  border-radius: 50px;
+  box-shadow: 1px 1px 5px #999;
+}
+button:hover{
+  background:#101010;
+  color:#10abff;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: darkorange;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}

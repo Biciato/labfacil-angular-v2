@@ -1,0 +1,35 @@
+#dashPanelTab {
+    width: 70%;
+    height: 90%;
+    margin: 3% 15%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    overflow: auto;
+
+    #dashPanelSectors {
+        position: absolute;
+        width: 56%;
+        bottom: calc(100% - 15vh);
+        left: 29%;
+        height: 6vh;
+        border-radius: 10px;
+        background-color: #0780c6;
+        display: flex;
+        font-size: 100%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+        a {
+            text-decoration: none;
+            flex-grow: 1;
+            text-align: center;
+            padding-top: 1%;
+            color: antiquewhite;
+            cursor: pointer;
+            transition: background-color 1000ms;
+            border: 8px solid #0780c6;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+}
